@@ -1,13 +1,14 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
+import { Link } from "react-router-dom";
 
 const Head = () => {
-  const dispatch  = useDispatch();
+  const dispatch = useDispatch();
 
   const toogleMenuHandler = () => {
-   dispatch(toggleMenu());
-  }
+    dispatch(toggleMenu());
+  };
   return (
     <div className="grid grid-flow-col p-2 my-2 shadow-lg">
       <div className="flex col-span-1 cursor-pointer">
@@ -17,11 +18,13 @@ const Head = () => {
           src="https://cdn.iconscout.com/icon/free/png-256/free-hamburger-menu-462145.png"
           alt="hamburger"
         />
-        <img
-          className="h-14 mx-2 "
-          src="https://www.freeiconspng.com/thumbs/youtube-logo-png/youtube-logo-png-transparent-image-5.png"
-          alt="youtube-logo"
-        />
+
+          <img
+            className="h-14 mx-2 "
+            src="https://www.freeiconspng.com/thumbs/youtube-logo-png/youtube-logo-png-transparent-image-5.png"
+            alt="youtube-logo"
+          />
+      
       </div>
       <div className="col-span-10 text-center">
         <input
