@@ -1,0 +1,10 @@
+component's
+
+1. Head
+2. Body
+- sidebar
+    -menu items
+- Main conatiner
+    -tag button
+    -video conatiner
+        -video card    
