@@ -70,7 +70,7 @@ const Head = () => {
           </button>
         </div>
         {showsuggestion &&  searchInput && (
-          <div className="px-5 py-3  w-[39rem] rounded-lg shadow-md bg-white border border-gray-100 absolute">
+          <div className="px-5 py-3  w-[39rem] rounded-lg shadow-md bg-white border border-gray-100 absolute z-10">
             <ul>
               {suggestion.map((s) => (
                 <li
