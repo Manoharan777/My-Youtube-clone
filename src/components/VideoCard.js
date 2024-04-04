@@ -21,7 +21,9 @@ const VideoCard = ({ videoinfo }) => {
 //Hoc implementation
 export const AddVideoCard = ({ videoinfo }) => {
   return (
-    <div className="p-2 m-2 border border-black">
+    <div className="p-1 m-2 bg-black text-white opacity-75 relative rounded-lg">
+      <span className="text-lg font-semibold absolute bottom-0 ">AD .</span>
+      <span className="absolute bottom-0 left-12">Sponsered</span>
       <VideoCard videoinfo={videoinfo} />
     </div>
   );
