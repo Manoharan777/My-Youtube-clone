@@ -6,3 +6,10 @@ export const YOUTUBE_VIDEOS_URL = "https://youtube.googleapis.com/youtube/v3/vid
 
 export const YOUTUBE_SEARCH_API =
   "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=";
+
+  export const SEARCH_QUERY_DATA =
+    "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&regionCode=IN&key=" +
+    GOOGLE_API_KEY + "&q=";
+
+
+  //&q=namastejavascript
