@@ -58,9 +58,9 @@ const Head = () => {
       <div className="col-span-10 ">
         <div>
           <input
-            className="w-1/2 p-2 px-4 border border-gray-400 rounded-l-full"
+            className="w-1/2 p-2 px-4 border border-gray-400 rounded-l-full "
             type="text"
-            placeholder="🔍  Search"
+            placeholder={showsuggestion ? "🔍" : "Search"}
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             onFocus={() => setShowSuggestion(true)}
