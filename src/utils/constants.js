@@ -11,5 +11,6 @@ export const YOUTUBE_SEARCH_API =
     "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&regionCode=IN&key=" +
     GOOGLE_API_KEY + "&q=";
 
+    export const LIVE_CHAT_COUNT = 25;
 
   //&q=namastejavascript

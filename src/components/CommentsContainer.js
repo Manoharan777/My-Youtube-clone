@@ -2,34 +2,34 @@ import React from "react";
 
 const commentsData = [
   {
-    name: "Mano",
+    name: "John",
     text: "This video looks nice and informative, keep doing like this. ",
     replies: [],
   },
   {
-    name: "Mano",
+    name: "John",
     text: "lorem ipsum dolar saga ",
     replies: [
       {
-        name: "Mano",
+        name: "John",
         text: "lorem ipsum dolar saga ",
         replies: [
           {
-            name: "Mano",
+            name: "John",
             text: "lorem ipsum dolar saga ",
             replies: [
               {
-                name: "Mano",
+                name: "John",
                 text: "lorem ipsum dolar saga ",
                 replies: [],
               },
               {
-                name: "Mano",
+                name: "John",
                 text: "lorem ipsum dolar saga ",
                 replies: [],
               },
               {
-                name: "Mano",
+                name: "John",
                 text: "lorem ipsum dolar saga ",
                 replies: [],
               },
@@ -38,25 +38,25 @@ const commentsData = [
         ],
       },
       {
-        name: "Mano",
+        name: "John",
         text: "lorem ipsum dolar saga ",
         replies: [],
       },
     ],
   },
   {
-    name: "Mano",
+    name: "John",
     text: "lorem ipsum dolar saga ",
     replies: [
       {
-        name: "Mano",
+        name: "John",
         text: "lorem ipsum dolar saga ",
         replies: [],
       },
     ],
   },
   {
-    name: "Mano",
+    name: "John",
     text: "lorem ipsum dolar saga ",
     replies: [],
   },
@@ -64,13 +64,14 @@ const commentsData = [
 
 const Comment = ({data}) => {
 
-    const {name,text,replies} = data;
+    const {name,text} = data;
     return (
-      <div className="flex shadow-sm bg-gray-100 rounded my-2 p-2">
-        <img className="w-16 h-10"
-          src="https://static.vecteezy.com/system/resources/thumbnails/019/879/186/small/user-icon-on-transparent-background-free-png.png"
-          alt="user"
-        />
+      <div className="flex items-center shadow-sm bg-gray-100 rounded my-2 p-2">
+        <img
+        src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-05.jpg"
+        alt="user"
+        className="w-10 rounded-full mr-2"
+      />  
         <div>
           <h1 className="text-lg font-bold">{name}</h1>
           <p>{text}</p>
@@ -79,7 +80,7 @@ const Comment = ({data}) => {
     );
 }
 
-
+//nested comments
 const CommentList = ({comments}) => {
     return comments.map((comment, index) => (
       <div key={index}>
@@ -93,7 +94,7 @@ const CommentList = ({comments}) => {
 
 const CommentsContainer = () => {
   return (
-    <div className="p-5 m-2">
+    <div className="p-5 my-2">
       <h1 className="text-2xl font-bold">Comments: </h1>
       <CommentList comments={commentsData} />
     </div>

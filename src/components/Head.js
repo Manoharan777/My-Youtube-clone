@@ -15,16 +15,17 @@ const Head = () => {
   };
 
   const getSuggestionSearchdata = async () => {
-    console.log(searchInput);
+   // console.log(searchInput);
     const response = await fetch(YOUTUBE_SEARCH_API + searchInput);
     const data = await response.json();
     setSuggestion(data[1]);
-    //update cache
+    //update cache memoization
     dispatch(cacheResult({
       [searchInput] : data[1],
     }))
   };
 
+  //debouncing feature
   useEffect(() => {
     const timer = setTimeout(() => {
     if (searchCache[searchInput]) {
@@ -69,7 +70,7 @@ const Head = () => {
             🔍
           </button>
         </div>
-        {showsuggestion &&  searchInput && (
+        {showsuggestion && searchInput && (
           <div className="px-5 py-3  w-[39rem] rounded-lg shadow-md bg-white border border-gray-100 absolute z-10">
             <ul>
               {suggestion.map((s) => (
@@ -86,9 +87,9 @@ const Head = () => {
       </div>
       <div className="col-span-1 cursor-pointer">
         <img
-          className="h-10"
-          src="https://static.vecteezy.com/system/resources/thumbnails/019/879/186/small/user-icon-on-transparent-background-free-png.png"
-          alt="user-logo"
+          src="https://static01.nyt.com/newsgraphics/2020/11/12/fake-people/4b806cf591a8a76adfc88d19e90c8c634345bf3d/fallbacks/mobile-05.jpg"
+          alt="user"
+          className="w-10 rounded-full"
         />
       </div>
     </div>
